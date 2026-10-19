@@ -18,6 +18,11 @@
     <div class="opt"><span>Sonido</span><input type="checkbox" id="o-snd" checked></div>
     <div class="opt"><span>Duración del partido</span><select id="o-time"><option value="60">1 min</option><option value="90" selected>1:30</option><option value="120">2 min</option><option value="180">3 min</option></select></div>
     <div class="opt"><span>Goles para ganar</span><select id="o-goals"><option>3</option><option selected>5</option><option>7</option><option>10</option></select></div>
+    <div class="opt"><span>Velocidad de los personajes</span><select id="o-spd"><option value="0.7">Lenta</option><option value="1" selected>Normal</option><option value="1.4">Rápida</option><option value="1.8">Turbo</option></select></div>
+    <div class="opt"><span>Estamina y dash ⚡</span><input type="checkbox" id="o-stam" checked></div>
+    <div class="opt"><span>Forma del campo</span><select id="o-shape"><option value="rect">Rectángulo</option><option value="hex">Hexágono</option><option value="oct">Octógono</option><option value="dia">Diamante</option><option value="bev">Biselado</option></select></div>
+    <div class="opt"><span>Fondo del campo</span><select id="o-bg"><option value="grass">Césped clásico</option><option value="night">Noche</option><option value="light">Claro</option><option value="ice">Hielo</option><option value="sand">Desierto</option><option value="neon">Neón</option></select></div>
+    <div class="opt"><span>Interfaz</span><select id="o-ui"><option value="auto">Automática</option><option value="light">Clara</option><option value="dark">Oscura</option></select></div>
     <div class="opt"><span>Jugador derecho controlado por IA</span><input type="checkbox" id="o-ai"></div>
   </div>
   <button class="sec" data-go="s-menu">Volver</button>
@@ -45,7 +50,7 @@
   <div id="hud"><span class="a" id="h-a"></span><span class="sc" id="h-sa">0</span><span id="h-t">0:00</span><span class="sc" id="h-sb">0</span><span class="b" id="h-b"></span></div>
   <div id="wrap"><canvas id="cv" width="900" height="480"></canvas>
     <div id="ov"><div class="champ" id="ov-t"></div><div id="ov-s" style="font-size:28px;margin-bottom:10px"></div><button id="b-cont">Continuar</button></div></div>
-  <div class="help">Izquierda (rojo): <b>W A S D</b> + <b>Espacio</b> para chutar · Derecha (azul): <b>Flechas</b> + <b>Enter</b> para chutar</div>
+  <div class="help">Izquierda (rojo): <b>W A S D</b> + <b>Espacio</b> chutar, <b>Shift izq.</b> dash · Derecha (azul): <b>Flechas</b> + <b>Enter</b> chutar, <b>Shift der.</b> dash</div>
   <button class="sec" id="b-quit" style="min-width:120px;padding:8px 16px">Salir</button>
 </section>
 

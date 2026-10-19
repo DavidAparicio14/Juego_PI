@@ -16,12 +16,12 @@ button.sec{background:transparent;color:var(--tx);border:2px solid var(--bd)}
 .opt:last-child{border:0}
 select,input[type=text]{font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--tx)}
 input[type=checkbox]{width:22px;height:22px;accent-color:var(--ac)}
-.names input{width:100%;margin:5px 0}
+.names{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}.names input{width:100%}
 #hud{display:flex;justify-content:center;align-items:center;gap:14px;font-weight:700;font-size:clamp(14px,3.5vw,22px);margin-bottom:8px;flex-wrap:wrap}
 #hud .a{color:var(--ac2)}#hud .b{color:var(--bl)}
 #hud .sc{font-size:1.5em;background:var(--card);padding:2px 14px;border-radius:8px;border:1px solid var(--bd)}
 #wrap{position:relative}
-canvas{width:100%;max-width:900px;height:auto;border-radius:12px;border:3px solid var(--bd);display:block;margin:0 auto}
+canvas{width:min(100%,calc((100vh - 200px)*1.875));max-width:900px;height:auto;aspect-ratio:900/480;border-radius:12px;border:3px solid var(--bd);display:block;margin:0 auto}
 #ov{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;background:rgba(0,0,0,.65);border-radius:12px;color:#fff}
 #ov.on{display:flex}
 .help{color:var(--mu);font-size:13px;margin-top:8px}
@@ -35,3 +35,5 @@ canvas{width:100%;max-width:900px;height:auto;border-radius:12px;border:3px soli
 .row.lose{opacity:.55;text-decoration:line-through}
 .msg{margin:10px 0;font-weight:600}
 .champ{font-size:clamp(22px,6vw,38px);margin:10px 0}
+
+@media (max-width:600px){.screen{padding:12px 8px}button{min-width:140px}.opt{font-size:14px;gap:8px}}
