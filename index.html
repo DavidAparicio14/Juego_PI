@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hexball</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="s-menu" class="screen active">
+  <h1>⬡ HEXBALL</h1><div class="sub">Fútbol arcade por torneo</div>
+  <button id="b-play">Jugar</button><br><button id="b-opt" class="sec">Opciones</button>
+</section>
+
+<section id="s-opt" class="screen">
+  <h2>Opciones</h2>
+  <div class="card">
+    <div class="opt"><span>Sonido</span><input type="checkbox" id="o-snd" checked></div>
+    <div class="opt"><span>Duración del partido</span><select id="o-time"><option value="60">1 min</option><option value="90" selected>1:30</option><option value="120">2 min</option><option value="180">3 min</option></select></div>
+    <div class="opt"><span>Goles para ganar</span><select id="o-goals"><option>3</option><option selected>5</option><option>7</option><option>10</option></select></div>
+    <div class="opt"><span>Jugador derecho controlado por IA</span><input type="checkbox" id="o-ai"></div>
+  </div>
+  <button class="sec" data-go="s-menu">Volver</button>
+</section>
+
+<section id="s-count" class="screen">
+  <h2>¿Cuántos jugadores?</h2><div class="sub">El torneo será por eliminatorias 1 contra 1</div>
+  <button data-n="2">2 jugadores</button><br><button data-n="4">4 jugadores</button><br><button data-n="8">8 jugadores</button><br>
+  <button class="sec" data-go="s-menu">Volver</button>
+</section>
+
+<section id="s-names" class="screen">
+  <h2>Nombres de los jugadores</h2>
+  <div class="card names" id="names"></div>
+  <button id="b-start">Empezar torneo</button><br><button class="sec" data-go="s-count">Volver</button>
+</section>
+
+<section id="s-bracket" class="screen">
+  <h2>Torneo</h2><div class="br" id="br"></div>
+  <div class="msg" id="msg"></div>
+  <button id="b-next">Jugar siguiente partido</button>
+</section>
+
+<section id="s-match" class="screen">
+  <div id="hud"><span class="a" id="h-a"></span><span class="sc" id="h-sa">0</span><span id="h-t">0:00</span><span class="sc" id="h-sb">0</span><span class="b" id="h-b"></span></div>
+  <div id="wrap"><canvas id="cv" width="900" height="480"></canvas>
+    <div id="ov"><div class="champ" id="ov-t"></div><div id="ov-s" style="font-size:28px;margin-bottom:10px"></div><button id="b-cont">Continuar</button></div></div>
+  <div class="help">Izquierda (rojo): <b>W A S D</b> + <b>Espacio</b> para chutar · Derecha (azul): <b>Flechas</b> + <b>Enter</b> para chutar</div>
+  <button class="sec" id="b-quit" style="min-width:120px;padding:8px 16px">Salir</button>
+</section>
+
+<section id="s-end" class="screen">
+  <h2>🏆 Torneo terminado</h2>
+  <div class="champ" id="champ"></div><div class="msg" id="final"></div>
+  <div class="br" id="br2"></div>
+  <button id="b-again">Menú principal</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
