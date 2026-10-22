@@ -11,15 +11,17 @@
   <h1>⬡ HEXBALL</h1><div class="sub">Fútbol arcade por torneo</div>
   <button id="b-play">Jugar</button>
   <button id="b-modes" class="sec">Modos de juego</button>
-  <div class="hint">Variantes para jugar de otra forma: Gol de oro, 2 contra 2…</div>
+  <div class="hint">Variantes para jugar de otra forma: Gol de oro, 2 contra 2, Campo de hielo…</div>
   <button id="b-opt" class="sec">Opciones</button>
-  <div class="hint">Personaliza tu experiencia: sonido, duración del partido, goles para ganar, nitro, tamaño del campo, dificultad de la IA, fondo e interfaz.</div>
+  <div class="hint">Personaliza tu experiencia: sonido, duración del partido, goles para ganar, nitro, tamaño del campo, dificultad de la IA, fondo, música, habilidades e interfaz.</div>
 </section>
 
 <section id="s-opt" class="screen">
   <h2>Opciones</h2><div class="sub">Ajusta el partido a tu gusto</div>
   <div class="card">
     <div class="opt"><span>Sonido</span><input type="checkbox" id="o-snd" checked></div>
+    <div class="opt"><span>Música de fondo</span><input type="checkbox" id="o-mus" checked></div>
+    <div class="opt"><span>Habilidades aleatorias ✨</span><input type="checkbox" id="o-pu" checked></div>
     <div class="opt"><span>Duración del partido</span><select id="o-time"><option value="60">1 min</option><option value="180" selected>3 min</option><option value="300">5 min</option></select></div>
     <div class="opt"><span>Goles para ganar</span><select id="o-goals"><option>3</option><option selected>5</option><option>7</option><option>10</option></select></div>
     <div class="opt"><span>Nitro y turbo ⚡</span><input type="checkbox" id="o-stam" checked></div>
@@ -42,6 +44,7 @@
   <h2>Modos de juego</h2><div class="sub">Elige cómo quieres jugar</div>
   <button class="mode" id="m-gold"><b>⚡ Gol de oro</b><span>Muerte súbita 1 contra 1: sin tiempo ni límite de goles, el primer gol gana el partido.</span></button>
   <button class="mode" id="m-2v2"><b>🤝 2 contra 2</b><span>Tú y un compañero IA contra dos rivales IA, en un campo un 25 % más grande. Tiempo y goles según Opciones.</span></button>
+  <button class="mode" id="m-ice"><b>🧊 Campo de hielo</b><span>Pista helada: el balón se desliza mucho más y los jugadores patinan, así que hay menos control. Tiempo y goles según Opciones.</span></button>
   <button class="sec" data-go="s-menu">Volver</button>
 </section>
 
